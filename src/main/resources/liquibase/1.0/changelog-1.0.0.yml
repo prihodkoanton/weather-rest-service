@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create table for the weather
+      author: Anton Prihodko
+      changes:
+        - createTable:
+            tableName: weather
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: date
+                  type: timestamp
+              - column:
+                  name: lat
+                  type: double precision
+              - column:
+                  name: lon
+                  type: double precision
+              - column:
+                  name: city
+                  type: varchar(256)
+              - column:
+                  name: state
+                  type: varchar(256)
+              - column:
+                  name: temperatures
+                  type: text[]

@@ -1,0 +1,19 @@
+server:
+  port: 8085
+logging:
+  level:
+    root: INFO
+    com.zaxxer.hikari.HikariConfig: INFO
+spring:
+  application:
+    name: weather-rest-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5434/weather-rest
+    username: admin
+    password: 1234
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+
+token:
+  editor-role: ItXyq9QdnmdjJwAIOBg0kndUc2isdZ
